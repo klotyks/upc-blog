@@ -12,65 +12,67 @@
       <div class="wrap-button">
         <button>Get users</button>
       </div>
-      <div class="wrapper row">
-        <div class="wrap-list-users">
+      <section class="wrapper row">
+        <acticle class="wrap-list-users">
           <h2>users</h2>
-          <div class="list-users">
-            <div class="item-user">
+          <ul id="elListUsers" class="list-users">
+            <li class="item-user">
               <span>
                 <b><i>user</i></b>
                 <div class="wrap-button">
                   <button>Get posts</button>
                 </div>
               </span>
-            </div>
-            <div class="item-user">
+            </li>
+            <li class="item-user">
               <span>
                 <b><i>user</i></b>
               </span>
               <div class="wrap-button">
                 <button>Get posts</button>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="wrap-list-posts">
+            </li>
+          </ul>
+        </acticle>
+        <acticle class="wrap-list-posts">
           <h2>posts</h2>
-          <div class="list-posts">
-            <div class="item-post">
+          <ul class="list-posts">
+            <li class="item-post">
               <span>
                 <b><i>post</i></b>
               </span>
               <div class="wrap-button">
                 <button>Get comments</button>
               </div>
-            </div>
-            <div class="item-post">
+            </li>
+            <li class="item-post">
               <span>
                 <b><i>post</i></b>
               </span>
               <div class="wrap-button">
                 <button>Get comments</button>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="wrap-list-comments">
+            </li>
+          </ul>
+        </acticle>
+        <acticle class="wrap-list-comments">
           <h2>comments</h2>
-          <div class="list-comments">
-            <div class="item-comment">
+          <ul class="list-comments">
+            <li class="item-comment">
               <span>
                 <b><i>comment</i></b>
               </span>
-            </div>
-            <div class="item-comment">
+            </li>
+            <li class="item-comment">
               <span>
                 <b><i>comment</i></b>
               </span>
-            </div>
-          </div>
-        </div>
-      </div>
+            </li>
+          </ul>
+        </acticle>
+      </section>
     </div>
+    <script src="./js/model.js"></script>
+    <script src="./js/view.js"></script>
   </body>
 </html>
