@@ -1,3 +1,9 @@
+function onClickButtonGetPosts(e) {
+  const elItemUser = e.target.closest('.item-user')
+  const userId = elItemUser.dataset['userId']
+  console.log(userId)
+}
+
 function renderUsers(users) {
   elListUsers.innerHTML = ''
   users.forEach(user => (elListUsers.innerHTML += generateUser(user)))
@@ -17,7 +23,7 @@ function renderComments(comments) {
 
 function generateUser(user) {
   return `
-<li class="item-user">
+<li class="item-user" data-user-id=${user.id}>
   <div>
     <div>
       <b>${user.username}</b>    
@@ -33,7 +39,7 @@ function generateUser(user) {
     </div>
   </div>
   <div class="wrap-button">
-    <button>Get posts</button>
+    <button onclick="onClickButtonGetPosts(event)">Get posts by userId</button>
   </div>
 </li>
 `
@@ -48,7 +54,7 @@ function generatePost(post) {
     <b><i>${post.body}</i></b>
   </span>
   <div class="wrap-button">
-    <button>Get comments</button>
+    <button>Get comments by postId</button>
   /div>
 </li>
 `

@@ -3,6 +3,7 @@ let posts = []
 let comments = []
 
 let user = {
+  id: 1,
   username: 'Bret',
   email: 'sincere@april.biz',
   city: 'Gwenborough',
