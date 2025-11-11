@@ -1,9 +1,9 @@
-function renderComments(users) {
+function renderUsers(users) {
   elListUsers.innerHTML = ''
-  users.forEach(user => (elListUsers.innerHTML += generatePost(user)))
+  users.forEach(user => (elListUsers.innerHTML += generateUser(user)))
 }
 
-function renderComments(posts) {
+function renderPosts(posts) {
   elListPosts.innerHTML = ''
   posts.forEach(post => (elListPosts.innerHTML += generatePost(post)))
 }
@@ -15,7 +15,7 @@ function renderComments(comments) {
   )
 }
 
-function generatePost(user) {
+function generateUser(user) {
   return `
 <li class="item-user">
   <div>
