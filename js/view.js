@@ -41,28 +41,28 @@ function generatePost(user) {
 function generatePost(post) {
   return `
 <li class="item-post">
-    <span>
-      <b><i>${post.title}</i></b>
-    </span>
-    <span>
-      <b><i>${post.body}</i></b>
-    </span>
-    <div class="wrap-button">
-      <button>Get comments</button>
-    /div>
-  </li>
+  <span>
+    <b><i>${post.title}</i></b>
+  </span>
+  <span>
+    <b><i>${post.body}</i></b>
+  </span>
+  <div class="wrap-button">
+    <button>Get comments</button>
+  /div>
+</li>
 `
 }
 
 function generateComment(comment) {
   return `
-  <li class="item-comment">
-     <span>
-      <b><i>${comment.email}</i></b>
-     </span>
-     <span>
-      <b><i>${comment.body}</i></b>
-     </span>
-  </li>
+<li class="item-comment">
+  <span>
+    <b><i>${comment.email}</i></b>
+  </span>
+  <span>
+    <b><i>${comment.body}</i></b>
+  </span>
+</li>
 `
 }
