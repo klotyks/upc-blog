@@ -14,3 +14,16 @@
 ## https://jsonplaceholder.typicode.com/posts?userId=4
 
 ## https://jsonplaceholder.typicode.com/comments?postId=33
+
+задача слоя api (слой транспорта) отдать слою модели данные в нужном для модели формате. тоесть именно api делает нормализацию данных (если нужно)
+
+UAH USD
+
+API
+APPLICATION
+PROGRAM
+INTERFACE
+
+4. при клике на кнопку "Get posts by userId" отрисовывать посты юзера
+
+5. при клике на кпопку "Get comments by postId" отрисовать комменты поста
