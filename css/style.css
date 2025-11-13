@@ -40,8 +40,9 @@ body {
 [class|='item'] {
   color: orange;
   padding: 5px;
-  border: 5px solid;
+  border: 3px solid;
   border-radius: 15px;
+  margin-bottom: 5px;
 }
 [class|='wrap-list'] {
   color: dodgerblue;
