@@ -26,7 +26,7 @@ function generateUser(user) {
 <li class="item-user" data-user-id=${user.id}>
   <div>
     <div>
-      <b>${user.username}</b>    
+      <b>${user.nickname}</b>    
     </div>
     <div>
       <i>${user.email}</i>
