@@ -1,5 +1,6 @@
-function handleGetPostsByUserId(userId) {
-  const posts = api.getPostsByUserId(userId)
+async function handleGetPostsByUserId(userId) {
+  const posts = await getPostsByUserId(userId)
+  setPosts(posts)
   renderPosts(posts)
 }
 

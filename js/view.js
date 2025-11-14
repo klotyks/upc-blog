@@ -1,7 +1,10 @@
 function onClickButtonGetPosts(e) {
   const elItemUser = e.target.closest('.item-user')
   const userId = elItemUser.dataset['userId']
-  console.log(userId)
+  handleGetPostsByUserId(userId)
+}
+function onClickButtonGetAllUsers() {
+  handleGetUsersAll()
 }
 
 function renderUsers(users) {
@@ -55,7 +58,7 @@ function generatePost(post) {
   </span>
   <div class="wrap-button">
     <button>Get comments by postId</button>
-  /div>
+  </div>
 </li>
 `
 }
@@ -72,3 +75,6 @@ function generateComment(comment) {
 </li>
 `
 }
+
+const elButtonGetAllUsers = document.querySelector('#get-users')
+elButtonGetAllUsers.onclick = onClickButtonGetAllUsers
