@@ -6,6 +6,11 @@ function onClickButtonGetPosts(e) {
 function onClickButtonGetAllUsers() {
   handleGetUsersAll()
 }
+function onClickButtonGetComments(e) {
+  const elItemPost = e.target.closest('.item-post')
+  const postId = elItemPost.dataset['postId']
+  handleGetCommentsByPostId(postId)
+}
 
 function renderUsers(users) {
   elListUsers.innerHTML = ''
@@ -49,7 +54,7 @@ function generateUser(user) {
 }
 function generatePost(post) {
   return `
-<li class="item-post">
+<li class="item-post" data-post-id=${post.id}>
   <span>
     <b><i>${post.title}</i></b>
   </span>
@@ -57,7 +62,7 @@ function generatePost(post) {
     <b><i>${post.body}</i></b>
   </span>
   <div class="wrap-button">
-    <button>Get comments by postId</button>
+    <button onclick="onClickButtonGetComments(event)">Get comments by postId</button>
   </div>
 </li>
 `

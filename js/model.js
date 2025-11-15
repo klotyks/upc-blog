@@ -8,6 +8,9 @@ function setUsers(usersData) {
 function setPosts(postsData) {
   posts = postsData
 }
+function setComments(commentsData) {
+  comments = commentsData
+}
 
 function addUser(user) {
   users.push(user)

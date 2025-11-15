@@ -12,3 +12,8 @@ async function getPostsByUserId(userId) {
   const text = await response.text()
   return JSON.parse(text)
 }
+async function getCommentsByPostId(postId) {
+  const response = await fetch(`${API_URL}comments?postId=${postId}`)
+  const text = await response.text()
+  return JSON.parse(text)
+}

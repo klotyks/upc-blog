@@ -11,7 +11,7 @@
 
 ## https://jsonplaceholder.typicode.com/users
 
-## https://jsonplaceholder.typicode.com/posts?userId=4
+## https://jsonplaceholder.typicode.com/posts?userId=
 
 ## https://jsonplaceholder.typicode.com/comments?postId=33
 
