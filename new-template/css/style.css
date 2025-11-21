@@ -77,25 +77,25 @@ textarea:active {
 button {
   padding: 15px 50px;
 }
-.app-toolbar {
+.app-bar {
   height: 80px;
   line-height: 80px;
   background: #2a2b2c;
   position: relative;
 }
-.app-toolbar > div {
+.app-bar > div {
   padding: 0 10px;
 }
 
-.toolbar-title {
+.app-bar-title {
   font-size: 22px;
   font-weight: 800;
   /* transform: rotate(45deg); */
 }
-.toolbar-menu {
+.app-bar-menu {
   font-size: 32px;
 }
-.toolbar-icons {
+.app-bar-icons {
   position: absolute;
   right: 0;
   top: 0;
@@ -118,7 +118,8 @@ main {
 
 .container {
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 1200px;
+  min-width: 500px;
   padding: 15px;
   border: 1px solid #2a2b2c;
 }
@@ -129,7 +130,6 @@ main {
 
 .item-post {
   padding: 15px;
-  /* border: 1px solid #2a2b2c; */
   border-radius: 25px;
   margin-bottom: 15px;
   background: #111213;
@@ -139,10 +139,14 @@ main {
   margin: 0 auto;
   border-radius: 25px;
   width: 60%;
+  min-width: 400px;
   border: 1px solid #2a2b2c;
   padding: 15px;
   box-shadow: 0 0 15px 0 #101112;
 }
 .wide button {
   width: 100%;
+}
+.post-info {
+  padding: 10px;
 }
