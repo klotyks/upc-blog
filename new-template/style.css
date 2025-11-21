@@ -1,0 +1,148 @@
+@import url(https://fonts.googleapis.com/css2?family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap);
+@import url(https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css);
+
+.tiktok-sans-foo {
+  font-family: 'TikTok Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: 'slnt' 0, 'wdth' 100;
+}
+.row {
+  font-size: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.row > * {
+  display: inline-block;
+  font-size: 18px;
+  white-space: normal;
+  overflow: hidden;
+  vertical-align: top;
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #1a1b1c;
+  margin: 0;
+}
+html,
+button,
+select,
+input,
+textarea {
+  color: #eaebec;
+  font-size: 18px;
+  font-family: 'TikTok Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: 'slnt' 0, 'wdth' 100;
+}
+textarea {
+  resize: none;
+}
+button,
+select,
+input,
+textarea {
+  padding: 5px 10px;
+  border: 1px solid #2a2b2c;
+  background: #2a2b2c;
+  outline: 0;
+  font-weight: 500;
+}
+button:hover,
+select:hover,
+input:hover,
+textarea:hover {
+  box-shadow: 0 0 15px 0 #101112;
+}
+button:focus,
+select:focus,
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 10px 0 #212223;
+  border: 1px solid #1a1b1c;
+}
+button:active,
+select:active,
+input:active,
+textarea:active {
+  box-shadow: 0 0 15px 0 #101112;
+  border: 1px solid #1a1b1c;
+}
+button {
+  padding: 15px 50px;
+}
+.app-toolbar {
+  height: 80px;
+  line-height: 80px;
+  background: #2a2b2c;
+  position: relative;
+}
+.app-toolbar > div {
+  padding: 0 10px;
+}
+
+.toolbar-title {
+  font-size: 22px;
+  font-weight: 800;
+  /* transform: rotate(45deg); */
+}
+.toolbar-menu {
+  font-size: 32px;
+}
+.toolbar-icons {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 26px;
+}
+main {
+  padding: 15px;
+}
+
+.field-select {
+  padding: 5px;
+}
+.field-text {
+  padding: 5px;
+}
+.vert > input,
+.vert > textarea {
+  width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 15px;
+  border: 1px solid #2a2b2c;
+}
+
+.list-posts {
+  padding: 15px;
+}
+
+.item-post {
+  padding: 15px;
+  /* border: 1px solid #2a2b2c; */
+  border-radius: 25px;
+  margin-bottom: 15px;
+  background: #111213;
+}
+
+.submit-post {
+  margin: 0 auto;
+  border-radius: 25px;
+  width: 60%;
+  border: 1px solid #2a2b2c;
+  padding: 15px;
+  box-shadow: 0 0 15px 0 #101112;
+}
+.wide button {
+  width: 100%;
+}
