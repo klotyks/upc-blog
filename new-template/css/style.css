@@ -65,6 +65,7 @@ button {
   max-width: 1200px;
   min-width: 500px;
   padding: 15px;
+  padding-bottom: 35px;
   border: 1px solid #2a2b2c;
 }
 .row {
@@ -94,7 +95,7 @@ button {
   font-size: 22px;
   font-weight: 800;
 }
-.app-bar-menu {
+.app-bar-menu > a > span {
   font-size: 32px;
 }
 .app-bar-icons {
@@ -150,4 +151,29 @@ button {
   a:hover {
     background: #414243;
   }
+}
+
+.copyrights {
+  text-align: center;
+  padding: 25px;
+}
+
+.toolbar {
+  background: #2a2b2c;
+  background: #1a1b1c;
+  background: #212223;
+  position: fixed;
+  width: 250px;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  left: -250px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px 0 #101112;
+}
+.app-bar-menu > a:focus + .toolbar {
+  left: 0;
+}
+.toolbar-bar > div {
+  padding: 0 10px;
 }

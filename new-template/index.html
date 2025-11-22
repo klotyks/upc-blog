@@ -12,19 +12,34 @@
     <div class="app">
       <div class="app-bar row">
         <div class="app-bar-menu">
-          <span class="mdi mdi-menu"></span>
+          <a href="#toolbar">
+            <span class="mdi mdi-menu"></span>
+          </a>
+          <div class="toolbar">
+            <div class="toolbar-bar row">
+              <div class="app-bar-menu">
+                <a href="#toolbar">
+                  <span class="mdi mdi-menu"></span>
+                </a>
+              </div>
+              <div class="app-bar-title">
+                <span>UPC Blog</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="app-bar-title"><span>UPC Blog</span></div>
+        <div class="app-bar-title">
+          <span>UPC Blog</span>
+        </div>
         <div class="app-bar-icons">
-          <span class="mdi mdi-dots-wideical"></span>
+          <span class="mdi mdi-dots-vertical"></span>
         </div>
       </div>
       <div class="app-tabs row">
-        <a href="">USERS</a>
-        <a href="">POSTS</a>
-        <a href="">COMMENTS</a>
+        <a href="#users">USERS</a>
+        <a href="#posts">POSTS</a>
+        <a href="#comments">COMMENTS</a>
       </div>
-
       <div class="container">
         <h1>Список постов:</h1>
         <div class="list-posts">
@@ -123,6 +138,10 @@
             <button>Добавить</button>
           </div>
         </div>
+      </div>
+
+      <div class="copyrights">
+        <span>©1729 - 2025 Все права запрещены.</span>
       </div>
     </div>
   </body>
