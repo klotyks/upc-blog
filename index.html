@@ -3,53 +3,146 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UPC-BLOG</title>
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <div id="app">
-      <h1 class="title">UPC-BLOG</h1>
-      <div class="wrap-button">
-        <button id="get-users">Get users</button>
-      </div>
-      <section class="wrapper row">
-        <acticle class="wrap-list-users">
-          <h2>users</h2>
-          <ul id="elListUsers" class="list-users">
-            <!-- <li class="item-user">
-              <span>
-                <b><i>user</i></b>
-                <div class="wrap-button">
-                  <button>Get posts by userId</button>
-                </div>
-              </span>
-            </li> -->
-          </ul>
-        </acticle>
-        <acticle class="wrap-list-posts">
-          <h2>posts</h2>
-          <ul id="elListPosts" class="list-posts">
-            <!-- <li class="item-post">
-              <span>
-                <b><i>post</i></b>
-              </span>
-              <div class="wrap-button">
-                <button>Get comments by postId</button>
+    <div class="app">
+      <div class="app-bar row">
+        <div class="app-bar-menu">
+          <a href="#toolbar">
+            <span class="mdi mdi-menu"></span>
+          </a>
+          <div class="toolbar">
+            <div class="toolbar-bar row">
+              <div class="app-bar-menu">
+                <a href="#toolbar">
+                  <span class="mdi mdi-menu"></span>
+                </a>
               </div>
-            </li> -->
-          </ul>
-        </acticle>
-        <acticle class="wrap-list-comments">
-          <h2>comments</h2>
-          <ul id="elListComments" class="list-comments">
-            <!-- <li class="item-comment">
-              <span>
-                <b><i>comment</i></b>
-              </span>
-            </li> -->
-          </ul>
-        </acticle>
-      </section>
+              <div class="app-bar-title">
+                <span>UPC Blog</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="app-bar-title">
+          <span>UPC Blog</span>
+        </div>
+        <div class="app-bar-icons">
+          <span class="mdi mdi-dots-vertical"></span>
+        </div>
+      </div>
+      <div class="app-tabs row">
+        <a href="#users">USERS</a>
+        <a href="#posts">POSTS</a>
+        <a href="#comments">COMMENTS</a>
+      </div>
+      <div class="container">
+        <h1>Список постов:</h1>
+        <div class="list-posts">
+          <div class="item-post">
+            <div class="post-content">
+              <h2>Шок!! Началось. Час назад совершилось не...</h2>
+              <p>
+                Час назад совершилось непридвиденное! Произошло то, чего никто
+                не ожидал!
+              </p>
+            </div>
+            <div>
+              <div class="wide">
+                <button>Подробней...</button>
+              </div>
+              <div class="post-info row">
+                <div>
+                  <span>Автор:</span>
+                  <b><i>klotyks</i></b>
+                  <b>&nbsp;|&nbsp;</b>
+                </div>
+                <div>
+                  <span>Комментариев:</span>
+                  <b><i>3</i></b>
+                  <b>&nbsp;|&nbsp;</b>
+                </div>
+                <div>
+                  <span>Рейтинг: </span>
+                  <span>
+                    <span class="mdi mdi-star"></span>
+                    <span class="mdi mdi-star"></span>
+                    <span class="mdi mdi-star"></span>
+                    <span class="mdi mdi-star-half-full"></span>
+                    <span class="mdi mdi-star-outline"></span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item-post">
+            <div class="post-content">
+              <h2>Шок!! Началось. Час назад совершилось не...</h2>
+              <p>
+                Час назад совершилось непридвиденное! Произошло то, чего никто
+                не ожидал!
+              </p>
+            </div>
+            <div>
+              <div class="wide">
+                <button>Подробней...</button>
+              </div>
+              <div class="post-info row">
+                <div>
+                  <span>Автор:</span>
+                  <b><i>klotyks</i></b>
+                  <b>&nbsp;|&nbsp;</b>
+                </div>
+                <div>
+                  <span>Комментариев:</span>
+                  <b><i>3</i></b>
+                  <b>&nbsp;|&nbsp;</b>
+                </div>
+                <div>
+                  <span>Рейтинг: </span>
+                  <span>
+                    <span class="mdi mdi-star"></span>
+                    <span class="mdi mdi-star"></span>
+                    <span class="mdi mdi-star"></span>
+                    <span class="mdi mdi-star-half-full"></span>
+                    <span class="mdi mdi-star-outline"></span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="submit-post">
+          <h1>Добавить пост:</h1>
+          <div class="field wide">
+            <select>
+              <option value="" disabled hidden selected>Выберите тему</option>
+              <option>Мореплавание</option>
+              <option>Космонавтика</option>
+              <option>Киберспорт</option>
+            </select>
+          </div>
+          <div class="field wide">
+            <label for="">Заголовок:</label>
+            <input value="" />
+          </div>
+          <div class="field wide">
+            <label for="">Текст поста:</label>
+            <textarea rows="7"></textarea>
+          </div>
+          <div class="wide">
+            <button>Добавить</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyrights">
+        <span>©1729 - 2025 Все права запрещены.</span>
+      </div>
     </div>
     <script src="./js/normalizeUser.js"></script>
     <script src="./js/api.js"></script>
