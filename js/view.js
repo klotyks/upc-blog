@@ -1,10 +1,12 @@
+function renderPagePosts() {}
+
 function generatePost(post) {
   return `
 <div class="item-post">
   <div class="post-content">
-    <h2>Шок!! Началось. Час назад совершилось не...</h2>
+    <h2>${post.title}</h2>
     <p>
-      Час назад совершилось непридвиденное! Произошло то, чего никто не ожидал!
+      ${post.body}
     </p>
   </div>
   <div>
