@@ -1,4 +1,10 @@
-function renderPagePosts() {}
+function renderPagePosts(posts) {
+  const elDivPosts = document.querySelector('.list-posts')
+  elDivPosts.innerHTML = ''
+  for (const post of posts) {
+    elDivPosts.innerHTML += generatePost(post)
+  }
+}
 
 function generatePost(post) {
   return `

@@ -7,6 +7,12 @@ async function getAllUsers() {
   return badUsers.map(normalizeUser)
 }
 
+async function getUserById(id) {
+  const response = await fetch(`${API_URL}users/${id}`)
+  const text = await response.text()
+  return JSON.parse(text)
+}
+
 async function getAllComments() {
   const response = await fetch(`${API_URL}comments`)
   const text = await response.text()
@@ -18,6 +24,7 @@ async function getPostsByUserId(userId) {
   const text = await response.text()
   return JSON.parse(text)
 }
+
 async function getCommentsByPostId(postId) {
   const response = await fetch(`${API_URL}comments?postId=${postId}`)
   const text = await response.text()
