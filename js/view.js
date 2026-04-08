@@ -5,6 +5,13 @@ function renderPagePosts(posts) {
     elDivPosts.innerHTML += generatePost(post)
   }
 }
+function renderComments(comments) {
+  const elDivComments = document.querySelector('.comments-list')
+  elDivComments.innerHTML = ''
+  for (const comment of comments) {
+    elDivComments.innerHTML += generateFullComment(comment)
+  }
+}
 
 function generatePost(post) {
   return `
@@ -22,7 +29,7 @@ function generatePost(post) {
     <div class="post-info row">
       <div>
         <span>Автор:</span>
-        <b><i>klotyks</i></b>
+        <b><i>${post.author}</i></b>
         <b>&nbsp;|&nbsp;</b>
       </div>
       <div>
@@ -44,3 +51,21 @@ function generatePost(post) {
   </div>
 </div>`
 }
+
+function generateFullComment() {
+  return `
+  <div class="comments">
+    <p>
+      ${comments.body}
+    </p>
+  </div>
+  `
+}
+
+function onClickCommentA() {
+  const elCommentsList = document.querySelector('.comments-list')
+  elCommentsList.setAttribute('id', 'display')
+}
+
+const elCommentA = document.querySelector('#comment-link')
+elCommentA.onclick = onClickCommentA

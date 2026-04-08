@@ -7,6 +7,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css"
+    />
   </head>
   <body>
     <div class="app">
@@ -161,7 +173,9 @@
                   <b>&nbsp;|&nbsp;</b>
                 </div>
                 <div>
-                  <span>Комментариев:</span>
+                  <span id="comment-link"
+                    ><a href="#comment">Комментариев:</a></span
+                  >
                   <b><i>3</i></b>
                   <b>&nbsp;|&nbsp;</b>
                 </div>
@@ -180,7 +194,19 @@
           </div>
         </div>
         <div class="comments-list">
-          <!--  -->
+          <div class="comments-item">
+            <span><span class="mdi mdi-account"></span>klotyks</span>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima
+              magnam laborum, provident quia sapiente ipsa non nobis optio
+              veritatis error esse. Tempore perferendis temporibus asperiores
+              labore ratione animi eum nulla?
+            </p>
+            <div class="rating">
+              <span class="mdi mdi-thumb-down-outline"></span>
+              <span class="mdi mdi-thumb-up-outline"></span>
+            </div>
+          </div>
         </div>
         <div class="comment">
           <div class="field wide">

@@ -14,6 +14,20 @@ function createPost(dto, author, commentsCount) {
   }
 }
 
+function createComment() {
+  return {
+    userId: 1,
+    text: '',
+  }
+}
+
+function createUser() {
+  return {
+    id: 1,
+    nickname: '',
+  }
+}
+
 function addPost(dto, author, commentsCount) {
   const post = createPost(dto, author, commentsCount)
   posts.push(post)
@@ -35,4 +49,16 @@ function addUser(user) {
 
 function addComment(comment) {
   comments.push(comment)
+}
+
+function removeUserById(id) {
+  users = users.filter(f => f.id !== id)
+}
+
+function removeCommentById(id) {
+  comments = comments.filter(f => f.id !== id)
+}
+
+function removePostById(id) {
+  posts = posts.filter(f => f.id !== id)
 }

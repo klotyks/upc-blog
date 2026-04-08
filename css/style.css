@@ -60,6 +60,10 @@ button {
   padding: 15px 50px;
 }
 
+.comments-item {
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
 .container {
   margin: 0 auto;
   max-width: 1200px;
@@ -115,11 +119,27 @@ button {
 .list-posts {
   padding: 15px;
 }
+
+/* .rating {
+  margin-bottom: 35px;
+} */
+
 .item-post {
   padding: 15px;
   border-radius: 25px;
   margin-bottom: 15px;
   background: #111213;
+}
+.comments-list {
+  padding: 15px;
+  border-radius: 25px;
+  margin-bottom: 15px;
+  background: #111213;
+  display: none;
+}
+
+#display {
+  display: block;
 }
 .item-post .post-info {
   padding: 10px;
