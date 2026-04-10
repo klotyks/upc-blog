@@ -1,83 +1,31 @@
-let users = []
-let posts = []
-let comments = []
+import { addComment, getComments } from './model/comments.js'
+import { getPosts, addPost } from './model/posts.js'
+import { addUser, getUsers } from './model/users.js'
 
-function createPost(dto) {
-  return {
-    id: Math.trunc(Math.random() * 10000),
-    title: dto.title,
-    body: dto.body,
-    userId: dto.userId,
-    rank: Math.trunc(Math.random() * 5 + 1),
-  }
-}
-function addPost(dto) {
-  const post = createPost(dto)
-  posts.push(post)
-}
-
-let x = Math.trunc(123.5)
-x = Math.random()
-x
-
-function createComment(dto) {
-  return {
-    id: Math.trunc(Math.random() * 10000),
-    userId: dto.user.id,
-    postId: dto.post.id,
-    text: dto.text,
-  }
-}
-function createUser(dto) {
-  return {
-    id: Math.trunc(Math.random() * 10000),
-    nickname: dto.nickname,
-  }
-}
-function addUser(dto) {
-  const user = createUser(dto)
-  users.push(user)
-}
-
-function setUsers(usersData) {
-  users = usersData
-}
-function setPosts(postsData) {
-  posts = postsData
-}
-function setComments(commentsData) {
-  comments = commentsData
-}
-
-function addComment(comment) {
-  comments.push(comment)
-}
-
-function removeUserById(id) {
-  users = users.filter(f => f.id !== id)
-}
-
-function removeCommentById(id) {
-  comments = comments.filter(f => f.id !== id)
-}
-
-function removePostById(id) {
-  posts = posts.filter(f => f.id !== id)
-}
+let currentUser = null // куда запихнуть куррент юзера (кто залогинился)
 
 addUser({ nickname: 'Alex' })
-users
+addUser({ nickname: 'John' })
+addUser({ nickname: 'Bond' })
 
-function postPostFromUserId(userId) {
-  let dto = { title: 'Nuclear attack', body: 'Everything very bad', userId }
-  addPost(dto)
-}
+addPost({
+  title: 'Nuclear attack',
+  body: 'Everything very bad',
+  userId: getUsers()[0].id,
+})
 
-postPostFromUserId(users[0].id)
-posts
+addPost({
+  title: 'Around moon',
+  body: 'Everything very good',
+  userId: getUsers()[1].id,
+})
 
-// let dto2 = { text: 'omg... we`re doomed!', user: user, post: post }
-// let comment = createComment(dto2)
+addComment({
+  postId: getPosts()[0].id,
+  userId: getUsers()[2].id,
+  text: 'omg... we`re doomed!',
+})
 
-// comment
-// posts
+console.log(getUsers())
+console.log(getPosts())
+console.log(getComments())
