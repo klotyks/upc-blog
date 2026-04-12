@@ -17,9 +17,18 @@ export function getUsers() {
 
 export function addUser(dto) {
   const user = createUser(dto)
+  if (users.some(u => u.nickname === user.nickname)) return
   users.push(user)
 }
 
 function removeUserById(id) {
   users = users.filter(f => f.id !== id)
 }
+
+// users
+// addUser({ nickname: 'Steve' })
+// users
+// addUser({ nickname: 'Steve' })
+// users
+// addUser({ nickname: 'Wozniak' })
+// users
