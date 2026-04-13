@@ -24,7 +24,7 @@ function generatePost(post) {
   </div>
   <div>
     <div class="wide">
-      <button>Подробней...</button>
+      <a href="#current_post"><button>Подробней...</button></a>
     </div>
     <div class="post-info row">
       <div>

@@ -1,4 +1,4 @@
-import { getCurrentUser } from './currentUser.js'
+// import { getCurrentUser } from './currentUser.js'
 
 let posts = []
 
@@ -13,6 +13,8 @@ function createPost(dto) {
     body: dto.body,
     userId: getCurrentUser().id,
     rank: Math.trunc(Math.random() * 5 + 1),
+    commentsCount: -1,
+    author: 'n/a',
   }
 }
 
@@ -20,11 +22,11 @@ function setPosts(postsData) {
   posts = postsData
 }
 
-export function getPosts() {
+function getPosts() {
   return [...posts]
 }
 
-export function addPost(dto) {
+function addPost(dto) {
   const post = createPost(dto)
   if (!post) return null
   posts.push(post)

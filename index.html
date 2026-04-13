@@ -55,20 +55,18 @@
         </div>
       </div>
       <div class="app-tabs row">
-        <a href="#users">USERS</a>
+        <a href="#add_post">ADD POST</a>
         <a href="#posts">POSTS</a>
+        <a href="#current_post">CURRENT POST</a>
+        <a href="#users">USERS</a>
         <a href="#comments">COMMENTS</a>
       </div>
-      <div class="container">
+      <div class="container" id="posts">
         <h1>Список превью постов:</h1>
         <div class="list-posts">
           <div class="item-post">
             <div class="post-content">
               <h2>Шок!! Началось. Час назад совершилось не...</h2>
-              <p>
-                Час назад совершилось непридвиденное! Произошло то, чего никто
-                не ожидал!
-              </p>
             </div>
             <div>
               <div class="wide">
@@ -101,14 +99,10 @@
           <div class="item-post">
             <div class="post-content">
               <h2>Шок!! Началось. Час назад совершилось не...</h2>
-              <p>
-                Час назад совершилось непридвиденное! Произошло то, чего никто
-                не ожидал!
-              </p>
             </div>
             <div>
               <div class="wide">
-                <button>Подробней...</button>
+                <a href="#current_post"><button>Подробней...</button></a>
               </div>
               <div class="post-info row">
                 <div>
@@ -135,6 +129,8 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="container" id="add_post">
         <div class="submit-post">
           <h1>Добавить пост:</h1>
           <div class="field wide">
@@ -158,7 +154,7 @@
           </div>
         </div>
       </div>
-      <div class="container">
+      <div class="container" id="current_post">
         <h1>Подробный пост:</h1>
         <div class="list-posts">
           <div class="item-post">
@@ -235,6 +231,10 @@
       </div>
     </div>
     <script src="./js/normalizeUser.js"></script>
+    <script src="./js/model/comments.js"></script>
+    <script src="./js/model/currentUser.js"></script>
+    <script src="./js/model/posts.js"></script>
+    <script src="./js/model/users.js"></script>
     <script src="./js/api.js"></script>
     <script src="./js/model.js"></script>
     <script src="./js/view.js"></script>

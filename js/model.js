@@ -1,7 +1,7 @@
-import { switchCurrentUserByNickname } from './model/currentUser.js'
-import { getComments, addComment } from './model/comments.js'
-import { getPosts, addPost } from './model/posts.js'
-import { getUsers, addUser } from './model/users.js'
+// import { switchCurrentUserByNickname } from './model/currentUser.js'
+// import { getComments, addComment } from './model/comments.js'
+// import { getPosts, addPost } from './model/posts.js'
+// import { getUsers, addUser } from './model/users.js'
 
 addUser({ nickname: 'Alex' })
 addUser({ nickname: 'John' })

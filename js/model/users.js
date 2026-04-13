@@ -11,11 +11,11 @@ function setUsers(usersData) {
   users = usersData
 }
 
-export function getUsers() {
+function getUsers() {
   return [...users]
 }
 
-export function addUser(dto) {
+function addUser(dto) {
   const user = createUser(dto)
   if (users.some(u => u.nickname === user.nickname)) return
   users.push(user)
