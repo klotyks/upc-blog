@@ -28,11 +28,9 @@ addPost({
 
 // сделать чтоб Bond добавил комментарий к новости про Around moon
 
-// addComment({
-//   postId: getPosts()[0].id,
-//   userId: currentUser.id,
-//   text: 'omg... we`re doomed!',
-// })
+addComment({
+  text: 'omg... we`re doomed!',
+})
 
 console.log(getUsers())
 console.log(getPosts())

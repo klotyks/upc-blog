@@ -1,10 +1,10 @@
+import { getCurrentUser } from './currentUser.js'
 let comments = []
 
 function createComment(dto) {
   return {
     id: Math.trunc(Math.random() * 10000),
-    userId: dto.userId,
-    postId: dto.postId,
+    userId: getCurrentUser().id,
     text: dto.text,
   }
 }
@@ -19,6 +19,7 @@ export function getComments() {
 
 export function addComment(dto) {
   const comment = createComment(dto)
+  if (!comment) return null
   comments.push(comment)
 }
 
