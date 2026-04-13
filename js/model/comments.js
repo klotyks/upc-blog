@@ -2,9 +2,14 @@ import { getCurrentUser } from './currentUser.js'
 let comments = []
 
 function createComment(dto) {
+  if (!getCurrentUser()) {
+    console.error('сначала войдите, а потом уже комментируйте')
+    return null
+  }
   return {
     id: Math.trunc(Math.random() * 10000),
     userId: getCurrentUser().id,
+    postId: dto.postId,
     text: dto.text,
   }
 }

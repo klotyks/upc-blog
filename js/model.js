@@ -1,7 +1,7 @@
-import { addComment, getComments } from './model/comments.js'
 import { switchCurrentUserByNickname } from './model/currentUser.js'
+import { getComments, addComment } from './model/comments.js'
 import { getPosts, addPost } from './model/posts.js'
-import { addUser, getUsers } from './model/users.js'
+import { getUsers, addUser } from './model/users.js'
 
 addUser({ nickname: 'Alex' })
 addUser({ nickname: 'John' })
@@ -29,6 +29,7 @@ addPost({
 // сделать чтоб Bond добавил комментарий к новости про Around moon
 
 addComment({
+  postId: getPosts()[1].id,
   text: 'omg... we`re doomed!',
 })
 

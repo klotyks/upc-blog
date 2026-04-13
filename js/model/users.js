@@ -24,11 +24,3 @@ export function addUser(dto) {
 function removeUserById(id) {
   users = users.filter(f => f.id !== id)
 }
-
-// users
-// addUser({ nickname: 'Steve' })
-// users
-// addUser({ nickname: 'Steve' })
-// users
-// addUser({ nickname: 'Wozniak' })
-// users
