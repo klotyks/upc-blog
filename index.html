@@ -43,15 +43,16 @@
         <div class="app-bar-title">
           <span>UPC Blog</span>
         </div>
+
+        <div class="app-bar-icons">
+          <span class="mdi mdi-dots-vertical"></span>
+        </div>
         <div class="app-bar-select-user">
-          <select name="" id="">
+          <select name="" id="select-users">
             <option value="">Alex</option>
             <option value="">John</option>
             <option value="">Bond</option>
           </select>
-        </div>
-        <div class="app-bar-icons">
-          <span class="mdi mdi-dots-vertical"></span>
         </div>
       </div>
       <div class="app-tabs row">
@@ -134,20 +135,12 @@
         <div class="submit-post">
           <h1>Добавить пост:</h1>
           <div class="field wide">
-            <select>
-              <option value="" disabled hidden selected>Выберите тему</option>
-              <option>Мореплавание</option>
-              <option>Космонавтика</option>
-              <option>Киберспорт</option>
-            </select>
-          </div>
-          <div class="field wide">
             <label for="">Заголовок:</label>
-            <input value="" />
+            <input id="input-heading" value="" />
           </div>
           <div class="field wide">
             <label for="">Текст поста:</label>
-            <textarea rows="7"></textarea>
+            <textarea id="textarea-text-post" rows="7"></textarea>
           </div>
           <div class="wide">
             <button>Добавить</button>

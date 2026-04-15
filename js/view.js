@@ -12,6 +12,18 @@ function renderComments(comments) {
     elDivComments.innerHTML += generateFullComment(comment)
   }
 }
+function renderSelectUsers() {
+  const elSelectUsers = document.querySelector('#select-users')
+  elSelectUsers.innerHTML = ''
+}
+
+function onClickAddPost() {
+  const elInputHeading = document.querySelector('#input-heading')
+  const elTextareaText = document.querySelector('#textarea-text-post')
+  const heading = elInputHeading.value
+  const text = elTextareaText.value
+  handleAddPost(heading, text)
+}
 
 function generatePost(post) {
   return `
@@ -62,6 +74,12 @@ function generateFullComment() {
   `
 }
 
+function generateUserOption() {
+  return `
+  <option value="">${users.nickname}</option>
+  `
+}
+
 function onClickCommentA() {
   const elCommentsList = document.querySelector('.comments-list')
   elCommentsList.setAttribute('id', 'display')
@@ -69,3 +87,6 @@ function onClickCommentA() {
 
 const elCommentA = document.querySelector('#comment-link')
 elCommentA.onclick = onClickCommentA
+
+const elButtonAddPost = document.querySelector('#add_post button')
+elButtonAddPost.onclick = onClickAddPost

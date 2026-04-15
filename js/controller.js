@@ -24,6 +24,11 @@ async function handleGetCommentsByPostId(postId) {
   renderComments(comments)
 }
 
+function handleAddPost(heading, text) {
+  addPost({ title: heading, body: text })
+  renderPagePosts(posts)
+}
+
 renderPagePosts(getPosts())
 
 // renderPagePosts([

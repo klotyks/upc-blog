@@ -144,6 +144,12 @@ button {
   display: none;
 }
 
+.app-bar-select-user {
+  position: absolute;
+  right: 50px;
+  top: 0;
+}
+
 #display {
   display: block;
 }
