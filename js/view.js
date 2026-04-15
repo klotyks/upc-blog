@@ -12,10 +12,23 @@ function renderComments(comments) {
     elDivComments.innerHTML += generateFullComment(comment)
   }
 }
-function renderSelectUsers() {
-  const elSelectUsers = document.querySelector('#select-users')
-  elSelectUsers.innerHTML = ''
+function renderSelectCurrentUser(users, currentUser) {
+  elSelectCurrentUser.innerHTML = ''
+  users.forEach(user => {
+    const htmlOption = generateUserOption(user)
+    elSelectCurrentUser.innerHTML += htmlOption
+  })
+  elSelectCurrentUser.value = currentUser.nickname
 }
+
+renderSelectCurrentUser(users, currentUser)
+
+function onChangeSelectCurrentUser(e) {
+  console.log(e.target.value)
+  switchCurrentUserByNickname(e.target.value)
+}
+
+elSelectCurrentUser.onchange = onChangeSelectCurrentUser
 
 function onClickAddPost() {
   const elInputHeading = document.querySelector('#input-heading')
@@ -74,9 +87,9 @@ function generateFullComment() {
   `
 }
 
-function generateUserOption() {
+function generateUserOption(user) {
   return `
-  <option value="">${users.nickname}</option>
+  <option>${user.nickname}</option>
   `
 }
 
