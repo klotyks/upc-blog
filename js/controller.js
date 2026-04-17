@@ -1,35 +1,46 @@
-// import { getPosts } from './model/posts.js'
-
-async function handleGetPostsByUserId(userId) {
-  const dtos = await getPostsByUserId(userId)
-  const user = await getUserById(userId)
-
-  dtos.forEach(async dto => {
-    const comments = await getCommentsByPostId(dto.id)
-    addPost(dto, user.username, comments.length)
-  })
-
-  renderPagePosts(posts)
-}
-
-async function handleGetUsersAll() {
-  const resultUsers = await getAllUsers()
-  setUsers(resultUsers)
-  renderUsers(users)
-}
-
-async function handleGetCommentsByPostId(postId) {
-  const resultComments = await getCommentsByPostId(postId)
-  setComments(resultComments)
-  renderComments(comments)
-}
-
 function handleAddPost(heading, text) {
   addPost({ title: heading, body: text })
   renderPagePosts(posts)
 }
 
 renderPagePosts(getPosts())
+
+function handleShowComments(postId) {
+  console.log('>>>', postId, '!!!')
+  renderComments(comments)
+}
+
+//
+//
+//
+//
+//
+
+// import { getPosts } from './model/posts.js'
+
+// async function handleGetPostsByUserId(userId) {
+//   const dtos = await getPostsByUserId(userId)
+//   const user = await getUserById(userId)
+
+//   dtos.forEach(async dto => {
+//     const comments = await getCommentsByPostId(dto.id)
+//     addPost(dto, user.username, comments.length)
+//   })
+
+//   renderPagePosts(posts)
+// }
+
+// async function handleGetUsersAll() {
+//   const resultUsers = await getAllUsers()
+//   setUsers(resultUsers)
+//   renderUsers(users)
+// }
+
+// async function handleGetCommentsByPostId(postId) {
+//   const resultComments = await getCommentsByPostId(postId)
+//   setComments(resultComments)
+//   renderComments(comments)
+// }
 
 // renderPagePosts([
 //   {

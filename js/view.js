@@ -1,3 +1,25 @@
+function renderPostDetails(post) {
+  const elItemPost = current_post.querySelector('.item-post')
+  const elH2 = elItemPost.querySelector('h2')
+  const elP = elItemPost.querySelector('p')
+  const elPostInfo = elItemPost.querySelector('.post-info')
+  const elAuthor = elPostInfo.querySelector('#post-author b i')
+  const elCommentsCount = elPostInfo.querySelector('#comment-link b i')
+  const elRank = elPostInfo.querySelectorAll('#post-rank > span > span')
+  elItemPost.dataset.postId = 321
+  elH2.textContent = 'foo'
+  elP.textContent = 'foo'
+  elAuthor.textContent = 'foo'
+  elCommentsCount.textContent = '5'
+  elRank.forEach(el => {
+    el.classList.remove('mdi-star')
+    el.classList.add('mdi-star-outline')
+  })
+}
+
+// countComment
+// commentCount
+
 function renderPagePosts(posts) {
   const elDivPosts = document.querySelector('.list-posts')
   elDivPosts.innerHTML = ''
@@ -7,6 +29,7 @@ function renderPagePosts(posts) {
 }
 function renderComments(comments) {
   const elDivComments = document.querySelector('.comments-list')
+  elDivComments.setAttribute('id', 'display')
   elDivComments.innerHTML = ''
   for (const comment of comments) {
     elDivComments.innerHTML += generateFullComment(comment)
@@ -18,7 +41,7 @@ function renderSelectCurrentUser(users, currentUser) {
     const htmlOption = generateUserOption(user)
     elSelectCurrentUser.innerHTML += htmlOption
   })
-  elSelectCurrentUser.value = currentUser.nickname
+  elSelectCurrentUser.value = currentUser?.nickname
 }
 
 renderSelectCurrentUser(users, currentUser)
@@ -77,13 +100,18 @@ function generatePost(post) {
 </div>`
 }
 
-function generateFullComment() {
+function generateFullComment(comment) {
   return `
-  <div class="comments">
-    <p>
-      ${comments.body}
-    </p>
+<div class="comments-item">
+  <span><span class="mdi mdi-account"></span>${comment.userId}</span>
+  <p>
+    ${comment.text}
+  </p>
+  <div class="rating">
+    <span class="mdi mdi-thumb-down-outline"></span>
+    <span class="mdi mdi-thumb-up-outline"></span>
   </div>
+</div>
   `
 }
 
@@ -94,8 +122,12 @@ function generateUserOption(user) {
 }
 
 function onClickCommentA() {
-  const elCommentsList = document.querySelector('.comments-list')
-  elCommentsList.setAttribute('id', 'display')
+  const elCommentA = document.querySelector('#comment-link')
+  const elItemPost = elCommentA.closest('.item-post')
+  const postId = elItemPost.dataset.postId
+  console.log(elItemPost)
+  // const elCommentsList = document.querySelector('.comments-list')
+  handleShowComments(postId)
 }
 
 const elCommentA = document.querySelector('#comment-link')

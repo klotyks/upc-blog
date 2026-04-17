@@ -26,11 +26,14 @@ addPost({
   body: 'Awaiting first interview from canadian lunonaft',
 })
 
-// сделать чтоб Bond добавил комментарий к новости про Around moon
-
 addComment({
   postId: getPosts()[1].id,
   text: 'omg... we`re doomed!',
+})
+
+addComment({
+  postId: getPosts()[1].id,
+  text: 'omg2... we`re doomed2!',
 })
 
 console.log(getUsers())

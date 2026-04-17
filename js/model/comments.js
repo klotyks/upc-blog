@@ -14,6 +14,10 @@ function createComment(dto) {
   }
 }
 
+function getCommentsByPostId(postId) {
+  return comments.filter(c => c.postId === postId)
+}
+
 function setComments(commentsData) {
   comments = commentsData
 }
