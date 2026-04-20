@@ -103,7 +103,7 @@ function generatePost(post) {
 function generateFullComment(comment) {
   return `
 <div class="comments-item">
-  <span><span class="mdi mdi-account"></span>${comment.userId}</span>
+  <span><span class="mdi mdi-account"></span>${currentUser.nickname}</span>
   <p>
     ${comment.text}
   </p>

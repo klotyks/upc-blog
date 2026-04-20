@@ -31,7 +31,6 @@ function addComment(dto) {
   if (!comment) return null
   comments.push(comment)
 }
-
 function removeCommentById(id) {
   comments = comments.filter(f => f.id !== id)
 }
