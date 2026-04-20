@@ -10,6 +10,8 @@ function handleShowComments(postId) {
   renderComments(comments)
 }
 
+renderSelectCurrentUser(users, currentUser)
+
 //
 //
 //

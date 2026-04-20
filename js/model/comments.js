@@ -10,6 +10,7 @@ function createComment(dto) {
     id: Math.trunc(Math.random() * 10000),
     userId: getCurrentUser().id,
     postId: dto.postId,
+    postRank: dto.postRank,
     text: dto.text,
   }
 }
@@ -31,6 +32,7 @@ function addComment(dto) {
   if (!comment) return null
   comments.push(comment)
 }
+
 function removeCommentById(id) {
   comments = comments.filter(f => f.id !== id)
 }

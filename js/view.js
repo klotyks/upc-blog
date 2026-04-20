@@ -44,14 +44,10 @@ function renderSelectCurrentUser(users, currentUser) {
   elSelectCurrentUser.value = currentUser?.nickname
 }
 
-renderSelectCurrentUser(users, currentUser)
-
 function onChangeSelectCurrentUser(e) {
   console.log(e.target.value)
   switchCurrentUserByNickname(e.target.value)
 }
-
-elSelectCurrentUser.onchange = onChangeSelectCurrentUser
 
 function onClickAddPost() {
   const elInputHeading = document.querySelector('#input-heading')
@@ -100,6 +96,22 @@ function generatePost(post) {
 </div>`
 }
 
+function generateRank(x) {
+  return `
+<span>
+  <span class="mdi ${x ? 'mdi-star' : 'mdi-star-outline'}"></span>
+</span>
+`
+}
+
+// 0   mdi-star-outline
+// 0.5 mdi-star-half-full
+// 1   mdi-star
+
+// mdi-star
+// mdi-star-half-full
+// mdi-star-outline
+
 function generateFullComment(comment) {
   return `
 <div class="comments-item">
@@ -135,3 +147,5 @@ elCommentA.onclick = onClickCommentA
 
 const elButtonAddPost = document.querySelector('#add_post button')
 elButtonAddPost.onclick = onClickAddPost
+
+elSelectCurrentUser.onchange = onChangeSelectCurrentUser

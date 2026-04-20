@@ -24,3 +24,8 @@ function addUser(dto) {
 function removeUserById(id) {
   users = users.filter(f => f.id !== id)
 }
+
+// function changeNicknameById(id, newNickname) {
+//   const user = users.find(u => u.id === id)
+//   user.nickname = newNickname
+// }
