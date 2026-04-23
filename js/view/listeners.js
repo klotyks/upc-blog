@@ -12,11 +12,11 @@ function onClickAddPost() {
 }
 
 function onClickAddComment() {
-  const elInputNickname = document.querySelector('#label-nickname')
+  // const elInputNickname = document.querySelector('#label-nickname')
   const elTextareaComment = document.querySelector('#textarea-comment')
-  const nickname = elInputNickname.value
+  // const nickname = elInputNickname.value
   const comment = elTextareaComment.value
-  handleAddComment(nickname, comment)
+  handleAddComment(comment)
 }
 
 function onClickCommentA() {

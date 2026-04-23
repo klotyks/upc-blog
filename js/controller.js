@@ -10,8 +10,8 @@ function handleShowComments(postId) {
   renderComments(comments)
 }
 
-function handleAddComment(nickname, comment) {
-  addComment({ text: comment, nickname: nickname })
+function handleAddComment(comment) {
+  addComment({ text: comment })
   renderComments(comments)
 }
 
