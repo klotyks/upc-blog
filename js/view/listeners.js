@@ -11,6 +11,14 @@ function onClickAddPost() {
   handleAddPost(heading, text)
 }
 
+function onClickAddComment() {
+  const elInputNickname = document.querySelector('#label-nickname')
+  const elTextareaComment = document.querySelector('#textarea-comment')
+  const nickname = elInputNickname.value
+  const comment = elTextareaComment.value
+  handleAddComment(nickname, comment)
+}
+
 function onClickCommentA() {
   const elCommentA = document.querySelector('#comment-link')
   const elItemPost = elCommentA.closest('.item-post')
@@ -25,5 +33,8 @@ elCommentA.onclick = onClickCommentA
 
 const elButtonAddPost = document.querySelector('#add_post button')
 elButtonAddPost.onclick = onClickAddPost
+
+const elButtonAddComment = document.querySelector('#button-send-comment')
+elButtonAddComment.onclick = onClickAddComment
 
 elSelectCurrentUser.onchange = onChangeSelectCurrentUser

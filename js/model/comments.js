@@ -10,6 +10,7 @@ function createComment(dto) {
     id: Math.trunc(Math.random() * 10000),
     userId: getCurrentUser().id,
     postId: dto.postId,
+    nickname: dto.nickname,
     postRank: dto.postRank,
     text: dto.text,
   }

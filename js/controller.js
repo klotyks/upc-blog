@@ -10,6 +10,11 @@ function handleShowComments(postId) {
   renderComments(comments)
 }
 
+function handleAddComment(nickname, comment) {
+  addComment({ text: comment, nickname: nickname })
+  renderComments(comments)
+}
+
 renderSelectCurrentUser(users, currentUser)
 
 //

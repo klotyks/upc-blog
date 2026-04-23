@@ -14,7 +14,7 @@ function createPost(dto) {
     userId: getCurrentUser().id,
     rank: Math.trunc(Math.random() * 5 + 1),
     commentsCount: -1,
-    author: 'n/a',
+    author: currentUser.nickname,
   }
 }
 
