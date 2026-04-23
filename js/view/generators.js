@@ -54,10 +54,12 @@ function generateFullComment(comment) {
 
 function generateRank(x) {
   return `
-<span>
   <span class="mdi ${x ? 'mdi-star' : 'mdi-star-outline'}"></span>
-</span>
 `
+}
+
+function renderRank(rank) {
+  generateRank(rank)
 }
 
 function generateUserOption(user) {
