@@ -25,11 +25,7 @@ function generatePost(post) {
       <div>
         <span>Рейтинг: </span>
         <span>
-          <span class="mdi mdi-star"></span>
-          <span class="mdi mdi-star"></span>
-          <span class="mdi mdi-star"></span>
-          <span class="mdi mdi-star-half-full"></span>
-          <span class="mdi mdi-star-outline"></span>
+          ${generateStarsRank(post.rank)}
         </span>
       </div>
     </div>
@@ -52,18 +48,18 @@ function generateFullComment(comment) {
   `
 }
 
-function generateRank(x) {
-  return `
-  <span class="mdi ${x ? 'mdi-star' : 'mdi-star-outline'}"></span>
-`
-}
-
-function renderRank(rank) {
-  generateRank(rank)
-}
-
 function generateUserOption(user) {
   return `
   <option>${user.nickname}</option>
   `
+}
+
+function generateStarRank(className) {
+  return `<span class="mdi ${className}"></span>`
+}
+
+function generateStarsRank(rank) {
+  const classNames = rankToClassNames(rank)
+  const html = classNames.map(generateStarRank).join('')
+  return html
 }

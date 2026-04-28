@@ -12,7 +12,7 @@ function createPost(dto) {
     title: dto.title,
     body: dto.body,
     userId: getCurrentUser().id,
-    rank: Math.trunc(Math.random() * 5 + 1),
+    rank: Math.random() * 5,
     commentsCount: -1,
     author: currentUser.nickname,
   }
