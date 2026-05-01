@@ -34,6 +34,18 @@ function renderComments(comments) {
   }
 }
 
+function renderTextareaComment() {
+  const elTextareaComment = document.querySelector('#textarea-comment')
+  elTextareaComment.value = ''
+}
+
+function renderTextareaAddPost() {
+  const elInputHeading = document.querySelector('#input-heading')
+  const elTextareaText = document.querySelector('#textarea-text-post')
+  elInputHeading.value = ''
+  elTextareaText.value = ''
+}
+
 function renderSelectCurrentUser(users, currentUser) {
   elSelectCurrentUser.innerHTML = ''
   users.forEach(user => {

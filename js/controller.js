@@ -1,5 +1,6 @@
 function handleAddPost(heading, text) {
   addPost({ title: heading, body: text })
+  renderTextareaAddPost()
   renderPagePosts(posts)
 }
 
@@ -12,6 +13,7 @@ function handleShowComments(postId) {
 
 function handleAddComment(comment) {
   addComment({ text: comment })
+  renderTextareaComment()
   renderComments(comments)
 }
 
