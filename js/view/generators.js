@@ -41,8 +41,11 @@ function generateFullComment(comment) {
     ${comment.text}
   </p>
   <div class="rating">
-    <span class="mdi mdi-thumb-down-outline"></span>
-    <span class="mdi mdi-thumb-up-outline"></span>
+    <b class="mdi mdi-thumb-up-outline"></b>
+    <i>0</i>
+    &nbsp;
+    <b class="mdi mdi-thumb-down-outline"></b>
+    <i>0</i>
   </div>
 </div>
   `

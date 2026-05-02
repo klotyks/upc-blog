@@ -11,7 +11,7 @@ function createComment(dto) {
     userId: getCurrentUser().id,
     postId: dto.postId,
     nickname: currentUser.nickname,
-    postRank: dto.postRank,
+    postRank: 0, // Math.random() * 5 // dto.postRank,
     text: dto.text,
   }
 }

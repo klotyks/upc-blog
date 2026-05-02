@@ -12,7 +12,8 @@ function createPost(dto) {
     title: dto.title,
     body: dto.body,
     userId: getCurrentUser().id,
-    rank: Math.random() * 5,
+    // Math.random() * 5,
+    rank: getCommentsByPostId(id).map(comment => comment.postRank),
     commentsCount: -1,
     author: currentUser.nickname,
   }
